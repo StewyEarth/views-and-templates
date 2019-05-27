@@ -11,23 +11,24 @@
 
 <body>
     <header>
-            <%- include("partials/header.ejs") %>
-            <%- include("partials/nav.ejs") %>
+        <%- include("partials/header.ejs") %>
+        <%- include("partials/nav.ejs") %>
     </header>
     <main>
         <%- include("partials/salebanner.ejs") %>
-        <h1 class="pagetitle">Contact us</h1>
-        <form class="contactform">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <button>Send</button>
-        </form>
+        <h1 class="pagetitle">Products</h1>
+        <div class="productlist">
+        <% products.forEach(product =>{ %>
+        <div class="product">
+            <img src=<%= typeof product.picture != "undefined" ? product.picture : "/img/products/placeholder.jpg" %> alt="product" class="productimg">
+            <p><%- product.name %></p>  
+        </div>
+        <% }); %>
     </main>
     <footer>
         <%- include("partials/footer.ejs") %>
     </footer>
-    
+
     <%- include("partials/scripts.ejs") %>
 </body>
 
