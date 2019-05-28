@@ -1,7 +1,7 @@
 <nav class="topnav">
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/products">Products</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li class="<%= typeof page != 'undefined' && page == 'home' ? 'menuactive' : '' %>"><a href="/">Home</a></li>
+        <li class="<%= typeof page != 'undefined' && page == 'products' ? 'menuactive' : '' %>"><a href="/products">Products</a></li>
+        <li class="<%= typeof page != 'undefined' && page == 'contact' ? 'menuactive' : '' %>"><a href="/contact">Contact</a></li>
     </ul>
 </nav>
